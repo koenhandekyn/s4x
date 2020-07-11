@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recordings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Record at</th>
+      <th>Source uri</th>
+      <th>Duration</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recordings.each do |recording| %>
+      <tr>
+        <td><%= recording.id %></td>
+        <td><%= recording.name %></td>
+        <td><%= recording.record_at %></td>
+        <td><%= recording.source_uri %></td>
+        <td><%= recording.duration %></td>
+        <td><%= recording.status %></td>
+        <td><%= link_to 'Show', recording %></td>
+        <td><%= link_to 'Edit', edit_recording_path(recording) %></td>
+        <td><%= link_to 'Destroy', recording, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recording', new_recording_path %>

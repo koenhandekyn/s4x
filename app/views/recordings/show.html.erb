@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recording.name %>
+</p>
+
+<p>
+  <strong>Record at:</strong>
+  <%= @recording.record_at %>
+</p>
+
+<p>
+  <strong>Source uri:</strong>
+  <%= @recording.source_uri %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @recording.duration %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @recording.status %>
+</p>
+
+<%= link_to 'Edit', edit_recording_path(@recording) %> |
+<%= link_to 'Back', recordings_path %>
